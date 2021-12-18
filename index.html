@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>FCC Survey form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="5400">
+        <meta name="keyword" content="FCC, survey_form">
+        <meta name="description" content="This is a mock survey form imitated from Free code camp">
+        <link rel="stylesheet" href="./styles/style.css">
+        <style></style>
+    </head>
+    <body>
+        <header id="header">
+            <h1>freeCodeCamp Survey Form</h1>
+            <p>Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <div id="form-container">
+            <form id="survey-form" action="action_page.php">
+                <div class="form-item">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-item">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-item">
+                    <label for="age" id="number-label">Age <span>(optional)</span></label>
+                    <input type="number" id="age" class="form-control" name="age" min="18" max="65" placeholder="Age">
+                </div>
+                <div class="form-item">
+                    <label for="" id="dropdown-label">Which option best describes your current role?</label>
+                    <select id="dropdown" name="dropdown" class="form-control">
+                        <option disabled selected value>Select current role</option>
+                        <option value="Student">Student</option>
+                        <option value="Full Time Job">Full Time Job</option>
+                        <option value="Full Time Learner">Full Time Learner</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="" id="recommend-label">Would you recommend freeCodeCamp to a friend?</label>
+                    <div class="radio-label">
+                        <input type="radio" value="Definitely" id="definitely" name="recommend">
+                        <label for="definitely" id="definitely-label">Definitely</label>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" value="Maybe" id="maybe" name="recommend">
+                        <label for="maybe" id=maybe-label>Maybe</label>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" value="Not sure" id="not-sure" name="recommend">
+                        <label for="not-sure" id=not-sure-label>Not sure</label>
+                    </div> 
+                </div>               
+                <div class="form-item">
+                    <label for="roles" id="roles-label">What would you like to see improved? <span>(Check all that apply)</span></label>
+                    <label class="inline-label"><input type="checkbox" id="frontend" name="roles" value="Frontend Projects">Front-end Projects</label>
+                    <label class="inline-label"><input type="checkbox" id="backend" name="roles" value="Backend Projects">Back-end Projects</label>
+                    <label class="inline-label"><input type="checkbox" id="challenges" name="roles" value="Challenges">Challenges</label>
+                    <label class="inline-label"><input type="checkbox" id="open-source-community" name="roles" value="Open Source Community">Open Source Community</label>
+                    <label class="inline-label"><input type="checkbox" id="gitter-help-rooms" name="roles" value="Gitter help rooms">Gitter help rooms</label>
+                    <label class="inline-label"><input type="checkbox" id="city-meetups" name="roles" value="City Meetups" checked>City Meetups</label>
+                    <label class="inline-label"><input type="checkbox" id="additional-courses" name="roles" value="Additional Courses">Additional Courses</label>
+                </div>
+                <div class="form-item">
+                    <label for="comment" id="comment-label">Any comments or suggestions?</label>
+                    <textarea id="comment" name="comment" value="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+                <div class="form-item"><input type="submit" id="submit"></div>
+            </form>
+        </div>    
+    </body>
+</html>

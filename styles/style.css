@@ -1,0 +1,119 @@
+/*The first four blocks of codes were adopted from 
+https://codepen.io/freeCodeCamp/pen/VPaoNP
+It is said to be the mobile friendly alternative to using background-attachment: fixed*/
+:root{
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    color: var(--color-white);
+    font-family: calibri, sans-serif;
+    font-size: 1.3em;
+}
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkbue);
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(33, 33, 156, 0.7)), url("../assets/survey-form-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header#header{
+    padding: 30px 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+#header h1{
+    font-size: 1.9em;
+    font-weight: 100;
+}
+#header p{
+    font-style: italic;
+    font-weight: 100;
+}
+div#form-container{
+    border-radius: 5px;
+    background-color: var(--color-darkblue-alpha);
+    padding: 15px 30px;
+    width: 100%;
+}
+div.form-item{
+    margin-top: 15px;
+    margin-bottom: 15px; 
+}
+#name-label, #name, #email-label, #email, #number-label, #age, #dropdown-label, #roles-label, #recommend-label, #comment-label{
+    display: block;
+}
+div.radio-label{
+    padding: 2px;
+    vertical-align: middle;
+}
+#maybe-label, #not-sure-label, #definitely-label{
+    display: inline-block;
+    width: 100px;
+}
+#name-label, #email-label, #number-label, #dropdown-label, #roles-label, #recommend-label, #comment-label{
+    padding: 10px 0px;
+}
+label.inline-label{
+    display: block;
+    padding: 5px 0px;
+}
+.form-control, #comment, #submit{
+    font-size: 0.8em;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    color: #495057;                 /*adopted from https://codepen.io/freeCodeCamp/pen/VPaoNP*/
+    transition: border-color 0.15s ease-in-out;
+}
+.form-control:hover{
+    border-color: #80bdff;          /*adopted from https://codepen.io/freeCodeCamp/pen/VPaoNP*/
+}
+#comment{
+    font-size: 1em;
+    display: block;
+    height: 120px;
+    resize: vertical;       /*Learnt about the resize property*/
+}
+#comment:hover{
+    border-color: #80bdff;
+}
+span{
+    font-size: 0.8em;
+}
+input[type="radio"], input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+#submit{
+    margin: 20px 0px;
+    color: white;
+    background-color: var(--color-green);
+    cursor: pointer;
+}
+@media only screen and (min-width: 540px){
+    div#form-container{
+        width: 540px;
+        margin: 0px auto;
+    }   
+}
+@media only screen and (min-width: 720px){
+    div#form-container{
+        width: 720px;
+        margin: 0px auto;
+    }   
+}
